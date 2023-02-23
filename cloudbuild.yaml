@@ -7,3 +7,9 @@ steps:
         'gcr.io/brownbagdemo-378700/brownbag-demo:$COMMIT_SHA',
         '.',
       ]
+  - name: 'gcr.io/cloud-builders/docker'
+    args:
+      [
+        'push',
+        'gcr.io/brownbagdemo-378700/brownbag-demo:$COMMIT_SHA',
+      ]  
