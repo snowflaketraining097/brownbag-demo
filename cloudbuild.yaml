@@ -18,7 +18,7 @@ steps:
       [
         'run',
         'deploy',
-        'cloud-run-continuous-deployment-example',
+        'brownbag-demo',
         '--image=gcr.io/brownbagdemo-378700/brownbag-demo:$SHORT_SHA',
         '--region=us-central1',
       ]
