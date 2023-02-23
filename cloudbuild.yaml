@@ -13,3 +13,13 @@ steps:
         'push',
         'gcr.io/brownbagdemo-378700/brownbag-demo:$COMMIT_SHA',
       ]  
+ - name: 'gcr.io/cloud-builders/gcloud'
+    args:
+      [
+        'run',
+        'deploy',
+        'cloud-run-continuous-deployment-example',
+	      '--platform=managed',
+        '--image=gcr.io/brownbagdemo-378700/brownbag-demo:$SHORT_SHA',
+        '--region=us-central1'
+      ]
